@@ -2,26 +2,23 @@ import socket
 
 class FlightClient:
     def __init__(self, host="127.0.0.1", port=5050):
-        # Set up connection settings
+ #setup connectuion settings
         self.host = host
         self.port = port
         self.client_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 
     def connect_to_server(self):
-        # Connect to the server and send client name
         self.client_socket.connect((self.host, self.port))
         name = input("Enter your name: ")
         self.client_socket.send(name.encode())
 
     def send_request(self, request):
-        # Send a request to the server and receive the response
         self.client_socket.send(request.encode())
         response = self.client_socket.recv(10000).decode()
         print("\n--- Server Response ---")
         print(response)
 
     def show_menu(self):
-        # Display the menu and handle user choices
         while True:
             print("\n--- Menu ---")
             print("1. Arrived Flights")
@@ -47,8 +44,8 @@ class FlightClient:
         self.client_socket.close()
         print("Disconnected.")
 
-# ======== Main program =========
-if __name__ == "_main_":
+#Main program 
+if __name__ == "__main__":  
     client = FlightClient()
     client.connect_to_server()
     client.show_menu()
