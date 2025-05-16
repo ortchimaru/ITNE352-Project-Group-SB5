@@ -130,6 +130,7 @@ Sample Code Snippet:
 
 # Example from server.py
 if req == "ARRIVED":
+result = ""
     for f in self.flights:
         if f.get("flight_status") == "landed":
             result += "Flight: " + str(f["flight"]["iata"]) + "\n"
