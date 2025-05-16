@@ -135,7 +135,7 @@ result = ""
         if f.get("flight_status") == "landed":
             result += "Flight: " + str(f["flight"]["iata"]) + "\n"
 
-I. Additional Concept: OOP (Object-Oriented Programming)
+## Additional Concept: OOP (Object-Oriented Programming)
 This project implements OOP principles through the use of custom classes:
 
 FlightServer: Encapsulates server functionality, socket setup, and threading.
@@ -150,7 +150,7 @@ Clear separation of concerns
 
 Easier to maintain and extend
 
-J. Acknowledgments
+## Acknowledgments
 
 AviationStack for providing a free API to retrieve live flight data.
 
@@ -160,5 +160,5 @@ Visual Studio Code for development.
 
 Github for management of the progress.
 
-K. Conclusion
+## Conclusion
 This project demonstrates practical usage of socket programming and API integration in Python. It offers real-time interaction between multiple clients and a server, showcasing how network communication, data fetching, and user interaction can be handled efficiently. The use of object-oriented programming improved the structure and readability of the code, making it an effective learning experience for us in network-based application development.
